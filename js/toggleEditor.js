@@ -5,7 +5,7 @@
 jQuery(document).ready(function($){
 	jQuery(".toggleEditor").each(function() {
 		var id = $(this).attr("id");
-		jQuery("<a style=\"cursor:pointer;padding:6px 3px; clear:both;\" class='edit_toggle' id=\"toggle_" + id + "\" onclick=\"toggleEditor('" + id + "')\">Toggle Editor</a>").insertAfter("#"+id); //Toggle Editor On/Off
+		jQuery("<a class='edit_toggle button-primary' id=\"toggle_" + id + "\" onclick=\"toggleEditor('" + id + "')\">Toggle Editor</a>").insertAfter("#"+id); //Toggle Editor On/Off
 	});
 });
 

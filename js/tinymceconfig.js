@@ -1,4 +1,4 @@
-var wpcf_theme_url = loadEditorCSS();
+var wpcf_theme_url = wpcf7_get_theme_url();
 var wpcf_theme_edstyle = wpcf_theme_url + "/editor-style.css";
 tinyMCE.init({
     theme : "advanced",
@@ -59,5 +59,5 @@ tinyMCE.init({
 });
 jQuery(document).ready(function(){
     // add editor toggle
-    jQuery("textarea").addClass("toggleEditor"); 
+    jQuery("#wpcf7-form,#wpcf7-mail-body").addClass("toggleEditor"); 
 });

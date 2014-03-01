@@ -12,10 +12,10 @@ function add_jquery_contact_form_tinymce( $hook ) {
     if (isset( $_GET['action'] ) && $_GET['action'] == 'edit' && isset( $_GET['post'] ) && $_GET['page'] == 'wpcf7') {    
         wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'tinymce', plugin_dir_url( __FILE__ ) . '/tinymce/tiny_mce.js' );
-        wp_enqueue_script( 'tinymceconfig', plugin_dir_url( __FILE__ ) . 'tinymce/tinymceconfig.js' );
-        wp_enqueue_script( 'toggletinymce', plugin_dir_url( __FILE__ ) . 'tinymce/toggleEditor.js' );
+        wp_enqueue_script( 'tinymceconfig', plugin_dir_url( __FILE__ ) . 'js/tinymceconfig.js' );
+        wp_enqueue_script( 'toggletinymce', plugin_dir_url( __FILE__ ) . 'js/toggleEditor.js' );
         echo "<script>
-        function loadEditorCSS(){ var wpcf7_theme_url = '".get_template_directory_uri()."'; return wpcf7_theme_url; } 
+        function wpcf7_get_theme_url(){ var wpcf7_theme_url = '".get_template_directory_uri()."'; return wpcf7_theme_url; } 
         </script>";      
     }
 }
